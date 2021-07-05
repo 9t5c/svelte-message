@@ -1,0 +1,32 @@
+{
+  "name": "svelte-message",
+  "version": "1.1.0",
+  "homepage": "https://github.com/lanset/svelte-message",
+  "author": {
+    "name": "lanset"
+  },
+  "private": false,
+  "keywords": [
+    "svelte",
+    "message",
+    "svelte-message",
+    "svelte message"
+  ],
+  "license": "MIT",
+  "files": [
+    "src/lib/message/*"
+  ],
+  "main": "src/lib/message/index.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.11",
+    "svelte": "^3.38.3",
+    "svelte-preprocess": "^4.7.3",
+    "typescript": "^4.3.5",
+    "vite": "^2.3.8"
+  }
+}
