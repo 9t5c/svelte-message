@@ -24,34 +24,35 @@
   {/each}
 </div>
 
+
 <style>
-  .message {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 10px;
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    pointer-events: none;
-  }
+.message {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 10px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
 
-  .message-item {
-    background: #fff;
-    color: #000;
-    box-shadow: 0 0 0 0.6px rgba(0, 0, 0, 0.15), 0 1.5px 1px rgba(0, 0, 0, 0.1);
-    margin: 8px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4px 10px;
-    min-height: 24px;
-    border-radius: 2px;
-  }
+.message-item {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 0 0.6px rgba(0, 0, 0, 0.15), 0 1.5px 1px rgba(0, 0, 0, 0.1);
+  margin: 8px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  min-height: 24px;
+  border-radius: 2px;
+}
 
-  .icon {
-    width: 16px;
-    margin-right: 8px;
-  }
+.icon {
+  width: 16px;
+  margin-right: 8px;
+}
 </style>

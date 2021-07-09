@@ -1,6 +1,6 @@
 {
   "name": "svelte-message",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "homepage": "https://github.com/lanset/svelte-message",
   "author": {
     "name": "lanset"
@@ -14,9 +14,10 @@
   ],
   "license": "MIT",
   "files": [
-    "src/lib/message/*"
+    "dist"
   ],
-  "main": "src/lib/message/index.ts",
+  "main": "/dist/index.umd.js",
+  "module": "/dist/index.es.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
