@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.13",
+    "rollup-plugin-copy": "^3.4.0",
     "svelte": "^3.38.3",
     "svelte-preprocess": "^4.7.4",
     "typescript": "^4.3.5",
