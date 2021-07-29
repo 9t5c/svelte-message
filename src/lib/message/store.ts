@@ -4,7 +4,7 @@ const createMessage = () => {
   const { subscribe, update } = writable([])
 
   const create = (msg: string, type = 'normal', duration: number = 3000) => {
-    update(n => [...n, {id: new Date(), type, msg, duration}])
+    update((n) => [...n, { id: Date.now(), type, msg, duration }])
 
     setTimeout(() => {
       reduceMessage()
@@ -12,7 +12,7 @@ const createMessage = () => {
   }
 
   const reduceMessage = () => {
-    update(n => [...n.slice(1)])
+    update((n) => [...n.slice(1)])
   }
 
   const normal = (msg: string, duration?: number) => {
