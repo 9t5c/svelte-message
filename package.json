@@ -1,6 +1,6 @@
 {
   "name": "svelte-message",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "homepage": "https://github.com/lanset/svelte-message",
   "author": {
     "name": "lanset"
@@ -16,7 +16,7 @@
   "license": "MIT",
   "files": [
     "dist",
-    "src/lit/message"
+    "src/lib/message"
   ],
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.15",
     "rollup-plugin-copy": "^3.4.0",
-    "svelte": "^3.41.0",
+    "svelte": "^3.42.1",
     "svelte-preprocess": "^4.7.4",
     "typescript": "^4.3.5",
     "vite": "^2.4.4"
