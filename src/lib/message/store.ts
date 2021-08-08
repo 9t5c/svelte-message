@@ -1,12 +1,24 @@
 import { writable } from 'svelte/store'
 
+let single = false
+export const setSingle = (val: boolean) => {
+  single = val
+}
+
 const createMessage = () => {
-  const { subscribe, update } = writable([])
+  const { subscribe, update, set } = writable([])
+  let timer
 
   const create = (msg: string, type = 'normal', duration: number = 3000) => {
-    update((n) => [...n, { id: Date.now(), type, msg }])
+    if (single) {
+      timer && clearTimeout(timer)
+      set([])
+      set([{ id: Date.now(), type, msg }])
+    } else {
+      update((n) => [...n, { id: Date.now(), type, msg }])
+    }
 
-    setTimeout(() => {
+    timer = setTimeout(() => {
       reduceMessage()
     }, duration)
   }

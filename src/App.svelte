@@ -1,8 +1,10 @@
 <script lang="ts">
   import { Message, message } from '~/lib/message'
+
+  let single = false
 </script>
 
-<Message />
+<Message options={{ single }} />
 
 <button
   on:click={() => {
