@@ -11,7 +11,5 @@ interface MessageOptions {
   single?: boolean
 }
 
-class Message extends SvelteComponentTyped<MessageOptions> {}
-
-export { Message }
+export class Message extends SvelteComponentTyped<{ options: MessageOptions }> {}
 export const message: MessageApi
