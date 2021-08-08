@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Message, { message } from '~/lib/message'
+  import { Message, message } from '~/lib/message'
 </script>
 
 <Message />

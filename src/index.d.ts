@@ -7,5 +7,7 @@ interface MessageApi {
   error(msg: string, duration?: number)
 }
 
-export default class Message extends SvelteComponentTyped {}
+class Message extends SvelteComponentTyped {}
+
+export { Message }
 export const message: MessageApi
