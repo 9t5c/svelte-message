@@ -39,6 +39,18 @@ yarn add svelte-message
 <button on:click={ () => { message.success("success", 3000) } }>success</button>
 ```
 
+## Other
+
+If you use [Vite](https://vitejs.dev/), need to add `exclude`:
+
+```
+vite.config.js
+
+optimizeDeps: {
+  exclude: ['svelte-message'],
+},
+```
+
 ## License
 
 [MIT](https://github.com/lanset/svelte-message/blob/main/LICENSE)
