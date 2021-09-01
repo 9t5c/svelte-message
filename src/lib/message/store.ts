@@ -1,8 +1,12 @@
 import { writable } from 'svelte/store'
 
 let single = false
+let toast = false
 export const setSingle = (val: boolean) => {
   single = val
+}
+export const setToast = (val: boolean) => {
+  toast = val
 }
 
 const createMessage = () => {

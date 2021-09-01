@@ -32,9 +32,10 @@ yarn add svelte-message
 <script>
   import { Message, message } from 'svelte-message'
   const single = false
+  const toast = false
 </script>
 
-<Message options={{ single }} />
+<Message options={{ single, toast }} />
 
 <button on:click={ () => { message.success("success", 3000) } }>success</button>
 ```

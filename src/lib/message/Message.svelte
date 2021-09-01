@@ -1,21 +1,27 @@
 <script lang="ts">
   import { fly } from 'svelte/transition'
   import { flip } from 'svelte/animate'
-  import { message, setSingle } from './store'
+  import { message, setSingle, setToast } from './store'
   import successIcon from './icon/success.svg'
   import warningIcon from './icon/warning.svg'
   import errorIcon from './icon/error.svg'
 
   interface MessageOptions {
     single?: boolean
+    toast?: boolean
   }
 
   export let options: MessageOptions = {
     single: false,
+    toast: false,
   }
 
   if (options.single) {
     setSingle(true)
+  }
+  if (options.toast) {
+    setSingle(true)
+    setToast(true)
   }
 
   const icon = {
@@ -25,15 +31,25 @@
   }
 </script>
 
-<div class="fixed top-4 left-0 right-0 z-9999 flex flex-col items-center pointer-events-none">
+<div
+  class="fixed top-4 left-0 right-0 z-9999 flex flex-col items-center pointer-events-none {options.toast
+    ? 'h-screen justify-center'
+    : ''}"
+>
   {#each $message as m, index (m.id)}
     <div
-      transition:fly={{ y: -6, x: 0 }}
+      transition:fly={{ y: options.toast ? 0 : -6, x: 0 }}
       animate:flip
-      class="bg-white text-black my-2 flex items-center justify-center py-1 px-2 rounded shadow {m.type}"
+      class="{options.toast
+        ? 'bg-black bg-opacity-70 text-white w-30 flex-col py-4'
+        : 'bg-white text-black px-2 py-1'} my-2 flex items-center justify-center rounded shadow"
     >
       {#if m.type !== 'normal'}
-        <img class="w-4 h-4 mr-2" src={icon[m.type]} alt="" />
+        <img
+          class={options.toast && m.type !== 'normal' ? 'w-10 h-10 mb-2' : 'mr-2 w-4 h-4'}
+          src={icon[m.type]}
+          alt=""
+        />
       {/if}
       <span class="text">{m.msg}</span>
     </div>

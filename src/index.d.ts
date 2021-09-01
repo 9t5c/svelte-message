@@ -9,6 +9,7 @@ interface MessageApi {
 
 interface MessageOptions {
   single?: boolean
+  toast?: boolean
 }
 
 export class Message extends SvelteComponentTyped<{ options: MessageOptions }> {}
