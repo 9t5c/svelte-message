@@ -1,6 +1,8 @@
-<h1 align="center">
-  Svelte Message
-</h1>
+# Svelte Message
+
+A Message Component from Svelte.
+
+<br>
 
 <p align="center">
   <img src="https://img.shields.io/npm/v/svelte-message?color=blue">
@@ -8,11 +10,6 @@
   <img src="https://img.shields.io/npm/dw/svelte-message">
 </p>
 
-<div align="center">
-A Message Component from Svelte.
-</div>
-
-<br>
 <br>
 
 ## Install
