@@ -11,7 +11,7 @@
   }
 
   export let options: MessageOptions = {
-    single: false
+    single: false,
   }
 
   if (options.single) {
@@ -25,45 +25,17 @@
   }
 </script>
 
-<div class="message">
+<div class="fixed top-4 left-0 right-0 z-9999 flex flex-col items-center pointer-events-none">
   {#each $message as m, index (m.id)}
-    <div transition:fly={{ y: -6, x: 0 }} animate:flip class="message-item {m.type}">
+    <div
+      transition:fly={{ y: -6, x: 0 }}
+      animate:flip
+      class="bg-white text-black my-2 flex items-center justify-center py-1 px-2 rounded shadow {m.type}"
+    >
       {#if m.type !== 'normal'}
-        <img class="icon" src={icon[m.type]} alt="" />
+        <img class="w-4 h-4 mr-2" src={icon[m.type]} alt="" />
       {/if}
       <span class="text">{m.msg}</span>
     </div>
   {/each}
 </div>
-
-<style>
-  .message {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 10px;
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    pointer-events: none;
-  }
-
-  .message-item {
-    background: #fff;
-    color: #000;
-    box-shadow: 0 0 0 0.6px rgba(0, 0, 0, 0.15), 0 1.5px 1px rgba(0, 0, 0, 0.1);
-    margin: 8px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4px 10px;
-    min-height: 24px;
-    border-radius: 2px;
-  }
-
-  .icon {
-    width: 16px;
-    margin-right: 8px;
-  }
-</style>

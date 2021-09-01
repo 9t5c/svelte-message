@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
+import WindiCSS from 'vite-plugin-windicss'
 import copy from 'rollup-plugin-copy'
 
 // https://vitejs.dev/config/
@@ -8,6 +9,7 @@ export default defineConfig({
     svelte({
       emitCss: false,
     }),
+    WindiCSS()
   ],
   resolve: {
     alias: [
