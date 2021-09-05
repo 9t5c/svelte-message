@@ -41,12 +41,12 @@
       transition:fly={{ y: options.toast ? 0 : -6, x: 0 }}
       animate:flip
       class="{options.toast
-        ? 'bg-black bg-opacity-70 text-white w-30 flex-col py-4'
+        ? 'bg-black bg-opacity-70 text-white w-30 flex-col py-2'
         : 'bg-white text-black px-2 py-1'} my-2 flex items-center justify-center rounded shadow"
     >
       {#if m.type !== 'normal'}
         <img
-          class={options.toast && m.type !== 'normal' ? 'w-10 h-10 mb-2' : 'mr-2 w-4 h-4'}
+          class={options.toast && m.type !== 'normal' ? 'w-10 h-10' : 'mr-2 w-4 h-4'}
           src={icon[m.type]}
           alt=""
         />
