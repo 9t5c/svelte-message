@@ -11,7 +11,9 @@
     "svelte",
     "message",
     "svelte-message",
-    "svelte message"
+    "svelte message",
+    "toast",
+    "svelte toast"
   ],
   "license": "MIT",
   "files": [
