@@ -2,7 +2,7 @@
   import { Message, message } from '~/lib/message'
 
   let single = false
-  let toast = true
+  let toast = false
 </script>
 
 <Message options={{ single, toast }} />
