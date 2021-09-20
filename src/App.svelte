@@ -11,14 +11,14 @@
 <button
   class="border w-20 rounded"
   on:click={() => {
-    message.normal('Normal', 100000)
+    message.normal('Normal', 5000)
   }}>normal</button
 >
 
 <button
   class="border w-20 rounded"
   on:click={() => {
-    message.success('success', 100000)
+    message.success('success')
   }}>success</button
 >
 
